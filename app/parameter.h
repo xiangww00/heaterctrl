@@ -4,8 +4,7 @@
 
 #define PARA_MAKER ((uint32_t) 0xb00bface)
 
-typedef struct 
-{
+typedef struct {
     uint8_t Second;
     uint8_t Minute;
     uint8_t Hour;
@@ -13,12 +12,11 @@ typedef struct
 } RTCTimeDef;
 
 typedef union {
-    RTCTimeDef rtcTime; 
+    RTCTimeDef rtcTime;
     int32_t Timer;
 } TimeDef;
 
-typedef struct 
-{
+typedef struct {
     int8_t TempMax;
     int8_t TempTarget;
     int8_t TempThreshold;
@@ -36,14 +34,13 @@ typedef struct
 
 } HeatSet;
 
-struct parameter_store  {
-
+struct parameter_store 
+{
     uint32_t Marker;
     HeatSet hCtrl[3];
 
-    uint32_t pading[1];
+    uint32_t pading[2];
 } ;
-
 
 extern  struct parameter_store  myParameter;
 

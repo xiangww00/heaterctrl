@@ -229,7 +229,7 @@ void Parameter_Load(void)
 {
     int8_t need2store = 0;
 
-    Flash_Load((uint32_t *)&myParameter, (sizeof(myParameter) + 3) / 4) ;
+    Flash_Load((uint32_t *)&myParameter, (sizeof(myParameter)) / 4) ;  //we have 8 bytes padding to avoid memory overlap.
     if (myParameter.Marker != PARA_MAKER) {
         EPRINTF(("Parameter table was first load, do init...\n"));
         Parameter_SetDefault();
