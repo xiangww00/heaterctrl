@@ -1,0 +1,8 @@
+*.[od]
+app/ver.h
+tags
+build
+*.ipch
+*.bin
+.vscode
+
